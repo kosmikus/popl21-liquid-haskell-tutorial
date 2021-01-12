@@ -1,6 +1,6 @@
 # Liquid Haskell: Refinement Type Checker for Haskell
 
-## POPL '21 Tutorial
+## POPL '21 Tutorial, Niki Vazou and Andres Löh
 
 If you want to follow allong with the workshop, please clone this repository and try to build it:
 
