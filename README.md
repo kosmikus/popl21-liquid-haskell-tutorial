@@ -1,6 +1,6 @@
 # Liquid Haskell: Refinement Type Checker for Haskell
 
-## POPL 21 Tutorial
+## POPL '21 Tutorial
 
 If you want to follow allong with the workshop, please clone this repository and try to build it:
 
@@ -39,7 +39,22 @@ If you want to follow allong with the workshop, please clone this repository and
   for the `Lists` module, it also indicates that `z3` has been succesfully
   invoked.
 
-- Unfortunately, Windows support for plugins is known to be unreliable.
+- For a better interactive development experience, we recommend the use of
+  [`ghcid`](https://hackage.haskell.org/package/ghcid). You can install this
+  program on your system via `cabal install` or `stack install`.
+
+  Once `ghcid` is in your PATH, you can invoke it for this project with
+  `ghcid -c "cabal v2-repl"` (when using cabal) or `ghcid -c "stack ghci"`
+  (when using stack). This should load the source files into `ghci`, run
+  the Liquid Haskell plugin on the way, and report that everything is good.
+  These results then update automatically once the source files are changes.
+
+  (In principle, Liquid Haskell should also work with `haskell-language-server`
+  or `ghcide`, which provide a more IDE-like experience. Unfortunately, that
+  support is still somewhat fragile and has some known issues, so while you're
+  welcome to try it, we will not use it in this tutorial.)
+
+- Unfortunately, Windows support for GHC plugins is known to be unreliable.
   If you are on Windows, the above may just not work. You may still have the
   option to install the `liquidhaskell` package on your system, giving you
   an executable called `liquid`, and running `liquid` on `` via
