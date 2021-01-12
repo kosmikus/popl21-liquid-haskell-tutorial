@@ -17,7 +17,8 @@ If you want to follow allong with the workshop, please clone this repository and
   to trigger the build.
 
   For building with
-  `stack`, you have to type `stack build` to trigger the build.
+  `stack`, you can let `stack` install the correct GHC version for you;
+  you have to type `stack build` to trigger the build.
 
   On a successful build, you should see no error messages and an output similar
   to the following for the final part of the build:
