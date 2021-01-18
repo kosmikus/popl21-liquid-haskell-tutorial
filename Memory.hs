@@ -1,6 +1,14 @@
+{-@ LIQUID "--reflection" @-}
+
 module Memory where
 
 import qualified Data.Set as S
+
+{-@ reflect get   @-}
+{-@ reflect set   @-}
+{-@ reflect unset @-}
+
+
 
 data Mem v = MEmp | MCons Int v (Mem v)
 
@@ -22,7 +30,6 @@ get :: Int -> Mem v -> v
 get addr (MCons addr' val' mem)
   | addr == addr' = val'
   | otherwise     = get addr mem
-get _ _ = error "impossible"
 
 {-@ set :: addr : Int -> v -> mem : Mem v
    -> { r : Mem v | memAddrs r == S.union (S.singleton addr) (memAddrs mem) } @-}
